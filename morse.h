@@ -1,8 +1,4 @@
-#define MORSE_UNIT 200
-
-#define DIT '.'
-
-#define DAH '-'
+#define MORSE_UNIT 200 // 200ms = 1 morse unit (see: https://nrich.maths.org/2198)
 
 void morse_setup();
 

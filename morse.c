@@ -21,7 +21,6 @@ void key_up() {
 /* ... end of LED/buzzer setup */
 
 void key_press(int n) {
-  _delay_ms(MORSE_UNIT);
   key_down();
 
   // loop needed, because _delay_ms() needs a const :-/
@@ -129,6 +128,8 @@ char *morse_translate(char c) {
 void morse_transmit(char ascii_char) {
   char *morse_char = morse_translate(ascii_char);
   
+  _delay_ms(MORSE_UNIT);
+
   do {
     
     switch(*morse_char) {
