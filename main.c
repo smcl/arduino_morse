@@ -1,5 +1,5 @@
 #include <util/delay.h>
-#include "morse.h"
+#include <morse.h>
 
 #define SECONDS 1000
 

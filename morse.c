@@ -1,7 +1,7 @@
 #include <avr/io.h>
 #include <ctype.h>
 #include <util/delay.h>
-#include "morse.h"
+#include <morse.h>
 
 /* start of LED/buzzer setup - change DDRB, DDB5, PORTB and PORTB5
    if you want to connect your output to something other than 
@@ -130,8 +130,9 @@ void morse_transmit(char ascii_char) {
   
   _delay_ms(MORSE_UNIT);
 
-  do {
-    
+  do {    
+    _delay_ms(MORSE_UNIT);
+
     switch(*morse_char) {
     case '.':
       dit();
